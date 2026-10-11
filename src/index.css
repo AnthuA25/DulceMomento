@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-crema font-sans text-chocolate-medio antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold text-chocolate;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.terracota.oscuro');
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-5 sm:px-6;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-terracota to-terracota-claro text-white shadow-btn hover:from-terracota-oscuro hover:to-terracota;
+  }
+  .btn-secondary {
+    @apply btn border border-arena bg-beige text-chocolate hover:bg-arena;
+  }
+  .btn-ghost {
+    @apply btn border border-arena bg-marfil text-chocolate hover:bg-beige;
+  }
+  .btn-sm {
+    @apply min-h-9 px-4 py-2 text-sm;
+  }
+  .card {
+    @apply rounded-card border border-arena bg-marfil shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full bg-marfil px-4 py-2 text-sm text-chocolate shadow-sm;
+  }
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.18em] text-terracota-oscuro;
+  }
+  .section {
+    @apply py-16 sm:py-20;
+  }
+  .section-title {
+    @apply text-center text-3xl sm:text-4xl;
+  }
+  .section-lead {
+    @apply mx-auto mt-3 max-w-2xl text-center text-chocolate-medio;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-chocolate;
+  }
+  .field {
+    @apply block w-full rounded-2xl border border-arena bg-marfil px-4 py-2.5 text-chocolate shadow-sm placeholder:text-chocolate-suave/70 focus:border-terracota focus:outline-none focus:ring-2 focus:ring-terracota/30;
+  }
+  .field[aria-invalid='true'] {
+    @apply border-red-600;
+  }
+  .field-error {
+    @apply mt-1 text-sm font-medium text-red-700;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-bold;
+  }
+  .notice {
+    @apply rounded-2xl border border-arena bg-beige px-4 py-3 text-sm text-chocolate-medio;
+  }
+  .admin-table th {
+    @apply whitespace-nowrap px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider text-chocolate-suave;
+  }
+  .admin-table td {
+    @apply border-t border-arena px-4 py-3 align-top text-sm text-chocolate;
+  }
+  .prose-email h1 { @apply mb-3 text-2xl; }
+  .prose-email h2 { @apply mb-2 text-xl; }
+  .prose-email h3 { @apply mb-2 mt-4 text-lg; }
+  .prose-email p { @apply mb-3; }
+  .prose-email a { @apply text-terracota-oscuro underline; }
+  .prose-email a[data-cta] {
+    @apply my-2 inline-block rounded-full bg-terracota px-5 py-2.5 font-bold text-white no-underline;
+  }
+  .prose-email ul { @apply mb-3 list-disc pl-6; }
+}

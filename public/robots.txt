@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /carrito
+Disallow: /checkout
+Disallow: /gracias
+Disallow: /pedido-confirmado
+Disallow: /baja
+
+Sitemap: https://anthua25.github.io/DulceMomento/sitemap.xml

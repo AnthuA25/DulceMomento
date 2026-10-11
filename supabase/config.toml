@@ -1,0 +1,20 @@
+# Las funciones públicas no exigen JWT de usuario: se protegen con validación,
+# honeypot y límite de peticiones. Las administrativas validan la sesión en el código.
+
+[functions.submit-inquiry]
+verify_jwt = false
+
+[functions.create-order]
+verify_jwt = false
+
+[functions.unsubscribe]
+verify_jwt = false
+
+[functions.email-webhook]
+verify_jwt = false
+
+[functions.run-automations]
+verify_jwt = false
+
+[functions.admin-email]
+verify_jwt = false
