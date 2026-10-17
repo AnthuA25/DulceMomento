@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fff9f2;
+  --color-ivory: #f8efe3;
+  --color-chocolate: #4a2c23;
+  --color-cocoa: #6a4031;
+  --color-rose: #d99aa8;
+  --color-soft-rose: #f4dce1;
+  --color-terracotta: #b85843;
+  --color-sand: #ead9c5;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
+}
+
+:root {
+  font-family: var(--font-body);
+  color: var(--color-chocolate);
+  background: var(--color-cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 4px;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-chocolate);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.brand-mark__accent {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  box-shadow: 0 0 0 0.22rem rgb(207 109 85 / 13%);
+}
