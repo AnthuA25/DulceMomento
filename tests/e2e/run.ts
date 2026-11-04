@@ -58,6 +58,17 @@ async function main() {
         description: document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '',
         h1: document.querySelectorAll('h1').length,
         widthFits: document.documentElement.scrollWidth <= window.innerWidth + 1,
+        overflowingElements: Array.from(document.querySelectorAll('body *'))
+          .map((element) => ({ element, rect: element.getBoundingClientRect() }))
+          .filter(({ rect }) => rect.right > window.innerWidth + 1)
+          .slice(0, 8)
+          .map(({ element, rect }) => ({
+            tag: element.tagName,
+            className: typeof element.className === 'string' ? element.className : '',
+            left: Math.round(rect.left),
+            right: Math.round(rect.right),
+            width: Math.round(rect.width),
+          })),
       }))
       check(`SEO y responsive ${path}`, Boolean(seo.title && seo.description && seo.h1 === 1 && seo.widthFits), JSON.stringify(seo))
     }
