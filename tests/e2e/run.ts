@@ -58,6 +58,12 @@ async function main() {
         description: document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '',
         h1: document.querySelectorAll('h1').length,
         widthFits: document.documentElement.scrollWidth <= window.innerWidth + 1,
+        layout: {
+          viewport: window.innerWidth,
+          document: document.documentElement.scrollWidth,
+          body: document.body.scrollWidth,
+          content: document.querySelector('header > div')?.getBoundingClientRect().toJSON(),
+        },
         overflowingElements: Array.from(document.querySelectorAll('body *'))
           .map((element) => ({ element, rect: element.getBoundingClientRect() }))
           .filter(({ rect }) => rect.right > window.innerWidth + 1)
