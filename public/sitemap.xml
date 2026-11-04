@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:5173/</loc></url>
+  <url><loc>http://localhost:5173/productos</loc></url>
+  <url><loc>http://localhost:5173/kekes-personalizados</loc></url>
+  <url><loc>http://localhost:5173/contacto</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-de-chocolate</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-de-vainilla</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-de-zanahoria</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-de-limon-y-arandanos</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-de-cumpleanos</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-para-reuniones</loc></url>
+  <url><loc>http://localhost:5173/productos/keke-personalizado</loc></url>
+</urlset>
