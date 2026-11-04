@@ -130,6 +130,8 @@ El repositorio `AnthuA25/DulceMomento` publica automáticamente la versión est�
 
 Cada push a `main` ejecuta tests y build, y luego publica `dist/`. En GitHub, habilitar **Settings → Pages → Build and deployment → GitHub Actions**. Configura las variables de Actions `VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_AUTH_DOMAIN`, `VITE_FIREBASE_PROJECT_ID`, `VITE_FIREBASE_APP_ID` y `VITE_GA_MEASUREMENT_ID` en **Settings → Secrets and variables → Actions → Variables**. Son valores de configuración web que se envían al navegador; la seguridad depende de Authentication y las reglas de Firestore, no de ocultarlos. El workflow falla antes de compilar si falta alguno. Firebase Spark permite Authentication y Firestore dentro de sus cuotas; no ejecuta correos, tareas programadas ni validación de precios en servidor.
 
+Para permitir el inicio de sesión desde el sitio publicado, agrega `anthua25.github.io` en Firebase Console → **Authentication → Settings → Authorized domains**.
+
 ## Despliegue en otros hostings
 
 1. Configurar las variables `VITE_*` en el hosting (Vercel, Netlify, Cloudflare Pages…).
